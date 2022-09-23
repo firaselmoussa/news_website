@@ -35,3 +35,15 @@ function(response){
     // PASSIGN DATA INTO THE FUNCTION THAT WILL CREATE NEW ARTICLES
     renderNews(response);
 });
+
+// AJAX VERSION
+$(function(){
+    $.ajax({
+        // its get by default but im gonna add it anyways
+        type: 'GET',
+        url: 'http://localhost/myprograms/news-api.php',
+        success: function(response){
+            console.log('success', response);
+        }
+    });
+});
