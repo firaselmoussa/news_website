@@ -13,6 +13,11 @@ function renderNews(response){
     let article = document.createElement('p');
     let date = document.createElement('h6');
 
+    // ADDED BOOTSTRAP CLASSES FOR STYLING
+    headline.classList.add('mt-5')
+    author.classList.add('text-secondary');
+    date.classList.add('text-muted');
+
     // INSERTING DATA INTO CREATED ARTICLE
     headline.innerHTML = data.headline;
     author.innerText = data.author;
